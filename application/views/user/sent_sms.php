@@ -69,7 +69,11 @@
                         <tr>
                            <td><?= $i ?></td>
                            <td><?= $smss->sms ?></td>
-                           <td><a href="<?= base_url() ?>admin/members/<?= $smss->group_id ?>"><?= $groups[$smss->group_id] ?></a></td>
+                           <td>
+                              <?php if(isset($groups[$smss->group_id])){ ?>
+                                <a href="<?= base_url() ?>admin/members/<?= $smss->group_id ?>"><?= $groups[$smss->group_id] ?></a>
+                              <?php }else{ ?> <span class="text-danger">Delted Group</span> <?php } ?>
+                            </td>
                            <td style="color: #<?= $smss->status == 'Fail' ? 'F63C41' : '3CF641' ?>;"><?= $smss->status ?></td>
                         </tr>
 

@@ -81,9 +81,9 @@
 	                   <input type="email" class="form-control" name="email" placeholder="Enter site  name" value="<?= $this->session->user[0]->email ?>" required>
                   </div>
 
-                   <div class="form-group alert alert-info">
+                   <div class="form-group alert alert-info" style="display: none;">
                       <label for="exampleInputEmail1">SMS Username</label>
-                     <input type="email" class="form-control" name="sms_username" placeholder="Enter SMS username" value="<?= $this->session->user[0]->sms_username ?>" required>
+                     <input type="email" class="form-control" name="sms_username" placeholder="Enter SMS username" value="<?= $this->session->user[0]->sms_username ?>" value="">
                   </div>
 
                   	<div class="card-footer">

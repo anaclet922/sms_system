@@ -2,6 +2,8 @@
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
 
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Admin extends CI_Controller {
 
@@ -498,7 +500,9 @@ class Admin extends CI_Controller {
         $a = array();
 
         if ($this->upload->do_upload('file_')){
+        	
             $file_metadata = $this->upload->data();
+
             $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 			$reader->setReadDataOnly(true);
 			$spreadsheet = $reader->load('./assets/other/' . $file_metadata['file_name']);
@@ -886,5 +890,16 @@ class Admin extends CI_Controller {
 
 		redirect($this->agent->referrer(), 'refresh');
 	}
+	public function delete_group($id){
+		$this->db->where('group_id', $id);
+		$this->db->delete('tbl_group_members');
 
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_groups');
+
+		$this->session->set_flashdata('msg', 'Group deleted!!');
+		$this->session->set_flashdata('alert', 'success');
+
+		redirect($this->agent->referrer(), 'refresh');
+	}
 }

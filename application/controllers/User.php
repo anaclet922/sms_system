@@ -30,11 +30,7 @@ class User extends CI_Controller {
 		if(!isset($this->session->user_data)){
         	redirect('user/login', 'refresh');
         }else{
-			if($this->session->user_data[0]->role == 'member'){
-	        	redirect('admin', 'refresh');
-	        }else if($this->session->user_data[0]->role == 'member'){
-	        	redirect('user', 'refresh');
-	        }
+	       redirect('admin', 'refresh');
         }
 
 	}
@@ -104,7 +100,7 @@ class User extends CI_Controller {
 
 		$old_password = hash("sha512", $_POST['old_password']);
 
-		if($old_password != $this->session->user[0]->password){
+		if(strtoupper($old_password) != strtoupper($this->session->user[0]->password)){
 			$this->session->set_flashdata('msg', 'Old password is incorrect!');
 			$this->session->set_flashdata('alert', 'danger');
 			redirect($this->agent->referrer(), 'refresh');
@@ -220,5 +216,14 @@ class User extends CI_Controller {
 			$this->session->set_flashdata('alert', 'danger');
 		}
 		redirect($this->agent->referrer(), 'refresh');
+	}
+	public function p_404(){
+		$seo_data['seo_data'] = array(
+			'title' => 'Not Found',
+		);
+		
+		$this->load->view('_parts/_header', $seo_data);
+		$this->load->view('404');
+		$this->load->view('_parts/_footer');
 	}
 }

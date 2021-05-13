@@ -67,7 +67,7 @@
                                   <td><?= $member->names ?></td>
                                   <td><?= $member->phone ?></td>
                                   <td>
-                                    <a href="#" onclick="removefromgroup('<?= $member->group_id ?>','<?= $member->phone ?>','tr-id-t-<?= $member->phone . $o  ?>')"><i class="fas fa-times-circle"></i></a>
+                                    <a href="#" onclick="removefromgroup('<?= $member->group_id ?>','<?= $member->phone ?>','tr-id-t-<?= $member->phone . $o  ?>')" class="text-danger"><i class="fas fa-times-circle"></i> Remove</a>
                                   </td>
                                </tr>
                               <?php $o++;} ?>

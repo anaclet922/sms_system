@@ -122,7 +122,7 @@
 		        </div>
 		            <!-- /.card -->
 
-		        <div class="card card-info">
+		        <div class="card card-info" style="display: none;">
 		              <div class="card-header">
 		                <h3 class="card-title">Footer address</h3>
 		              </div>
@@ -149,35 +149,11 @@
 		        </div>
 		            <!-- /.card -->
 		        
-		         <div class="card card-danger">
-		              <div class="card-header">
-		                <h3 class="card-title">Ste email</h3>
-		              </div>
-		              <!-- /.card-header -->
-		              <!-- form start -->
-		              <form class="form" method="post" action="<?= base_url() ?>admin/change_site_email" enctype="multipart/form-data">
-		                <div class="card-body">
-		                  <div class="form-group">
-		                
-		                  	<div class="form-group">
-			                    <label for="exampleInputEmail1">E-mail</label>
-			                     <input type="email" name="email" class="form-control" value="<?= webSettings()['site_email'] ?>" placeholder="Eg: info@example.com...">
-		                  </div>
-		                <div class="card-footer">
-		                	<center>
-		                  			<button type="submit" class="btn btn-primary">
-		                  			<i class="fas fa-save"></i> Save</button>
-		                  	</center>
-		                </div>
-		                </div>
-		            </div>
-		              </form>
-		          </div>
-		            <!-- /.card -->
+		    
 
 
 
-		          <div class="card card-primary">
+		          <div class="card card-primary" style="display: none;">
 		              <div class="card-header">
 		                <h3 class="card-title">Terms and condition</h3>
 		              </div>
@@ -277,7 +253,7 @@
 		         </div>
 		            <!-- /.card -->
 
-		          <div class="card card-secondary">
+		          <div class="card card-secondary" style="display: none;">
 		              <div class="card-header">
 		                <h3 class="card-title">Footer about</h3>
 		              </div>
@@ -303,7 +279,7 @@
 		          </div>
 		            <!-- /.card -->
 
-		          <div class="card card-secondary">
+		          <div class="card card-secondary" style="display: none;">
 		              <div class="card-header">
 		                <h3 class="card-title">Social Media</h3>
 		              </div>
@@ -334,7 +310,7 @@
 		          </div>
 		            <!-- /.card -->
 
-		          <div class="card card-warning">
+		          <div class="card card-warning" style="display: none;">
 		              <div class="card-header">
 		                <h3 class="card-title">Privacy policy</h3>
 		              </div>
@@ -360,7 +336,7 @@
 		          </div>
 		            <!-- /.card -->
 
-		             <div class="card card-danger">
+		          <div class="card card-danger" style="display: none;">
 		              <div class="card-header">
 		                <h3 class="card-title">Inbox Mode</h3>
 		              </div>
@@ -387,6 +363,35 @@
 		                </div> </div>
 		              </form>
 		          </div>
+
+
+		          <div class="card card-danger">
+		              <div class="card-header">
+		                <h3 class="card-title">Site email</h3>
+		              </div>
+		              <!-- /.card-header -->
+		              <!-- form start -->
+		              <form class="form" method="post" action="<?= base_url() ?>admin/change_site_email" enctype="multipart/form-data">
+		                <div class="card-body">
+		                  <div class="form-group">
+		                
+		                  	<div class="form-group">
+			                    <label for="exampleInputEmail1">E-mail</label>
+			                     <input type="email" name="email" class="form-control" value="<?= webSettings()['site_email'] ?>" placeholder="Eg: info@example.com...">
+		                  </div>
+		                <div class="card-footer">
+		                	<center>
+		                  			<button type="submit" class="btn btn-primary">
+		                  			<i class="fas fa-save"></i> Save</button>
+		                  	</center>
+		                </div>
+		                </div>
+		            </div>
+		              </form>
+		          </div>
+		            <!-- /.card -->
+
+
           </div>
           <!--/.col (right) -->
         </div>
