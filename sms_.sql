@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2021 at 10:34 PM
+-- Generation Time: Aug 22, 2021 at 06:26 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -39,10 +39,10 @@ CREATE TABLE `tbl_config` (
 --
 
 INSERT INTO `tbl_config` (`id`, `config_key`, `value`, `created_at`) VALUES
-(1, 'logo', '1614987431.png', '2021-03-17 12:26:15'),
-(2, 'site_name', 'IConnect SMSer', '2021-03-17 12:26:15'),
-(3, 'favicon', '1615985715.png', '2021-03-17 12:26:15'),
-(4, 'site_keywords', 'sms, iconnect, africa', '2021-03-17 12:26:15'),
+(1, 'logo', '1620940729.png', '2021-03-17 12:26:15'),
+(2, 'site_name', 'My SMSer', '2021-03-17 12:26:15'),
+(3, 'favicon', '1620940749.png', '2021-03-17 12:26:15'),
+(4, 'site_keywords', 'sms, anaclet, africa', '2021-03-17 12:26:15'),
 (5, 'site_description', 'Description of app and more\r\n', '2021-03-17 12:26:15'),
 (6, 'site_currency', 'RWF', '2021-03-17 12:26:15'),
 (7, 'footer_about', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&nbsp; tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>', '2021-03-17 12:26:15'),
@@ -52,7 +52,7 @@ INSERT INTO `tbl_config` (`id`, `config_key`, `value`, `created_at`) VALUES
 (11, 'footer_youtube', 'https://youtube.com', '2021-03-17 12:26:15'),
 (12, 'footer_linkedin', 'https://linkedin.com', '2021-03-17 12:26:15'),
 (13, 'site_about', 'About', '2021-03-17 12:26:15'),
-(14, 'site_email', 'support@iconnect.rw', '2021-03-17 12:26:15'),
+(14, 'site_email', 'ahishakiye@anaclet.online', '2021-03-17 12:26:15'),
 (15, 'site_terms', '<p align=\"center\"><b>Terms and condition.</b></p><div align=\"left\"><br></div><p align=\"center\"><br><br></p>', '2021-03-17 12:26:15'),
 (16, 'site_privacy', '<div align=\"center\"><b>Privacy policy</b></div><div align=\"center\"><div align=\"left\"><br></div><br></div>', '2021-03-17 12:26:15'),
 (17, 'inbox_mode', 'shortcode', '2021-03-17 12:26:15');
@@ -78,7 +78,6 @@ CREATE TABLE `tbl_groups` (
 --
 
 INSERT INTO `tbl_groups` (`id`, `group_name`, `group_description`, `group_icon`, `user_id`, `shortcode`, `created_at`) VALUES
-(1, 'Group 1', '<p>Group description<br></p>', '1615991048.jpg', 1, NULL, '2021-03-17 14:24:08'),
 (2, 'My Gees', '<p>Desc<br></p>', '1616073944.jpg', 1, NULL, '2021-03-18 13:25:44');
 
 -- --------------------------------------------------------
@@ -100,9 +99,9 @@ CREATE TABLE `tbl_group_members` (
 --
 
 INSERT INTO `tbl_group_members` (`id`, `names`, `phone`, `group_id`, `created_at`) VALUES
-(217, 'Anaclet Ahish', '784354460', 1, '2021-03-18 13:24:01'),
-(218, 'John Doe', '727598920', 1, '2021-03-18 13:24:01'),
-(219, 'Smith E', '780989760', 1, '2021-03-18 13:24:01');
+(220, 'Anaclet Ahish', '784354460', 2, '2021-03-18 21:41:52'),
+(221, 'John Doe', '727598920', 2, '2021-03-18 21:41:52'),
+(222, 'Smith Eric', '789539109', 2, '2021-03-18 21:41:52');
 
 -- --------------------------------------------------------
 
@@ -146,7 +145,17 @@ INSERT INTO `tbl_incoming_sms` (`id`, `sms_id`, `text`, `linkId`, `date`, `from_
 (34, '56216', 'qqewr', 'bad3231a-8529-49ef-8155-3020a99b18da', '2021-03-18T20:09:52.342Z', '+250727598920', '4460', '2021-03-18 20:09:58'),
 (35, '56217', 'yoooo ', '799a1ce3-1748-4b06-8aec-f4882cd32b9c', '2021-03-18T20:11:29.241Z', '+250727598920', '4460', '2021-03-18 20:11:31'),
 (36, '56218', 'ppp', 'b7bb7e2f-9e73-4d83-bfe3-edb6b8a4b112', '2021-03-18T20:12:24.381Z', '+250727598920', '4460', '2021-03-18 20:12:28'),
-(37, '56219', 'Iye', '27201315-4ef6-4639-8cb3-0bbdd2480b7e', '2021-03-18T20:18:35.661Z', '+250727598920', '4460', '2021-03-18 20:19:50');
+(37, '56219', 'Iye', '27201315-4ef6-4639-8cb3-0bbdd2480b7e', '2021-03-18T20:18:35.661Z', '+250727598920', '4460', '2021-03-18 20:19:50'),
+(38, '56220', 'Yoo i', '0fbb5da8-c0c1-4ce1-bb98-4f70f3076a15', '2021-03-18T21:47:01.202Z', '+250784354460', '4460', '2021-03-18 21:55:50'),
+(39, '56221', 'IK', '2c4ef58f-29c9-4e49-848f-8994ee41c929', '2021-03-18T21:47:14.462Z', '+250727598920', '4460', '2021-03-18 21:55:50'),
+(40, '56222', 'yope', '9ff79df5-cef6-41b1-bfec-01740a81bb2e', '2021-03-18T21:47:32.821Z', '+250789539109', '4460', '2021-03-18 21:55:50'),
+(41, '56223', 'Positivo', '063adc2d-673d-4dea-a869-b0f000bd7e77', '2021-03-18T21:48:46.262Z', '+250789539109', '4460', '2021-03-18 21:55:50'),
+(42, '56221', 'IK', '2c4ef58f-29c9-4e49-848f-8994ee41c929', '2021-03-18T21:47:14.462Z', '+250727598920', '4460', '2021-03-18 21:55:59'),
+(43, '56222', 'yope', '9ff79df5-cef6-41b1-bfec-01740a81bb2e', '2021-03-18T21:47:32.821Z', '+250789539109', '4460', '2021-03-18 21:55:59'),
+(44, '56223', 'Positivo', '063adc2d-673d-4dea-a869-b0f000bd7e77', '2021-03-18T21:48:46.262Z', '+250789539109', '4460', '2021-03-18 21:55:59'),
+(45, '56222', 'yope', '9ff79df5-cef6-41b1-bfec-01740a81bb2e', '2021-03-18T21:47:32.821Z', '+250789539109', '4460', '2021-03-18 21:56:09'),
+(46, '56223', 'Positivo', '063adc2d-673d-4dea-a869-b0f000bd7e77', '2021-03-18T21:48:46.262Z', '+250789539109', '4460', '2021-03-18 21:56:09'),
+(47, '56223', 'Positivo', '063adc2d-673d-4dea-a869-b0f000bd7e77', '2021-03-18T21:48:46.262Z', '+250789539109', '4460', '2021-03-18 21:56:18');
 
 -- --------------------------------------------------------
 
@@ -223,7 +232,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `first_name`, `last_name`, `email`, `password`, `profile_pic`, `balance`, `role`, `sms_username`, `active`, `updated_at`) VALUES
-(1, 'Anaclet', 'Ahishakiye', 'a.anaclet920@gmail.com', '13399D110A67A367366B39C57E03DB848784C7B35BDB8E09F76B16584BB5921A9179F1657ABEEB5F69C8AD3CA923D09E2E2BDA273E116674937A8DAF23F06F02', '1615986369.jpg', 11, 'admin', '', 1, '2021-03-14 05:34:07'),
+(1, 'Anaclet', 'Ahishakiye', 'a.anaclet920@gmail.com', '13399d110a67a367366b39c57e03db848784c7b35bdb8e09f76b16584bb5921a9179f1657abeeb5f69c8ad3ca923d09e2e2bda273e116674937a8daf23f06f02', '1615986369.jpg', 11, 'admin', '', 1, '2021-03-14 05:34:07'),
 (2, 'Anaclet', 'Ahish', 'anaclet921@gmail.com', '13399D110A67A367366B39C57E03DB848784C7B35BDB8E09F76B16584BB5921A9179F1657ABEEB5F69C8AD3CA923D09E2E2BDA273E116674937A8DAF23F06F02', '1614993918.png', 0, 'member', '', 0, '2021-03-14 05:34:07');
 
 --
@@ -292,13 +301,13 @@ ALTER TABLE `tbl_groups`
 -- AUTO_INCREMENT for table `tbl_group_members`
 --
 ALTER TABLE `tbl_group_members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
 
 --
 -- AUTO_INCREMENT for table `tbl_incoming_sms`
 --
 ALTER TABLE `tbl_incoming_sms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `tbl_sent_sms`

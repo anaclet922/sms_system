@@ -100,7 +100,7 @@
 
 
 
-<input type="hidden" name="last_id" id="last_id" value="<?= $last_id ?>">
+<input type="hidden" name="last_id" id="last_id" value="<?= isset($last_id) == true ? $last_id : '' ?>">
 <script type="text/javascript">
     $(document).ready(function(){
 
